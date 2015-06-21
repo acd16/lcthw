@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define MAX_NAME_LEN 50
+
 typedef struct person{
     char * name;
     int age;
@@ -11,7 +13,8 @@ typedef struct person{
 
 void create_pers(pers ** inp, char * name, int age, int height, int weight){
     *inp = malloc(sizeof(pers));
-    strncpy((*inp)->name, name, 50);
+	(*inp)->name = malloc(MAX_NAME_LEN * sizeof (char));
+    strcpy((*inp)->name, name);
     (*inp)->age = age;
     (*inp)->height= height;
     (*inp)->weight= weight;
@@ -22,8 +25,11 @@ void print_pers(pers *inp){
 }
 
 void destroy_pers(pers *inp){
-    if(inp)
+    if(inp){
+		if(inp->name)
+			free(inp->name);
         free(inp);
+	}
 }
 
 int main(){
