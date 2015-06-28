@@ -12,3 +12,5 @@ CC=gcc
 	$(CC) $(CFLAGS) 16.c -o $@
 17.o:17.c
 	$(CC) $(CFLAGS) 17.c -o $@
+18.o:18.c
+	$(CC) $(CFLAGS) 18.c -o $@
