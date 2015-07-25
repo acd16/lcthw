@@ -151,7 +151,7 @@ int process_input(Map * map){
 						if (map->loc->south) printf("South\n");
 						if (map->loc->east) printf("East\n");
 						if (map->loc->west) printf("West\n");
-						map->_(move)(map,NORTH);
+						//map->_(move)(map,NORTH);
 						break;
 
 				case 'x':
@@ -160,7 +160,7 @@ int process_input(Map * map){
 						break;
 
 				default:
-						printf("unknown option\n");
+						printf("unknown option %c\n", c);
 
 		}
 		return 1;
@@ -174,7 +174,8 @@ int main(int argc, char ** argv){
 		printf("You enter -> ");
 		map -> loc-> _(describe)(map->loc);
 
-		while(process_input(map))
-
+		while(process_input(map) > 0){
+		}
+		printf("Crossed\n");
 		return 0;
 }
