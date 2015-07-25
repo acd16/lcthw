@@ -174,8 +174,8 @@ int main(int argc, char ** argv){
 		printf("You enter -> ");
 		map -> loc-> _(describe)(map->loc);
 
-		while(process_input(map) > 0){
-		}
+		while(process_input(map) > 0);
+		
 		printf("Crossed\n");
 		return 0;
 }
