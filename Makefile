@@ -16,3 +16,5 @@ CC=gcc
 	$(CC) $(CFLAGS) 18.c -o $@
 19:object.c 19.c
 	$(CC) $(CFLAGS) $^ -o $@
+20: 20.c
+	$(CC) $(CFLAGS) $^ -o $@
