@@ -20,3 +20,5 @@ CC=gcc
 	$(CC) $(CFLAGS) $^ -o $@
 22: 22.c 22_helper.c
 	$(CC) $(CFLAGS) $^ -o $@
+25: 25.c
+	$(CC) $(CFLAGS) $^ -o $@
